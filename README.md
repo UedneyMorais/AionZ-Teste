@@ -74,31 +74,27 @@ DB_PORT=5432
 DB_USER=docker_user
 DB_PASSWORD=docker_password
 DB_NAME=product_db
-PORT=3000
-NODE_ENV=production
-Frontend (via docker-compose.yml)
-yaml
-environment:
-  WAIT_FOR_API: "true"
-  API_URL: "http://api_products:3000"
 ```
-5. Como Rodar a Aplicação
-5.1. Iniciando com Docker Compose
-bash
+5. Como Rodar a Aplicação</br>
+5.1. Iniciando com Docker Compose</br>
+```bash
 docker compose up --build -d --force-recreate
 https://img.shields.io/badge/Comando-docker_compose_up-2496ED?style=flat
+```
+Parâmetro	Descrição</br>
+--build	Constrói imagens a partir dos Dockerfiles</br>
+-d	Executa em modo detached (segundo plano)</br>
+--force-recreate	Recria os containers mesmo sem mudanças</br>
 
-Parâmetro	Descrição
---build	Constrói imagens a partir dos Dockerfiles
--d	Executa em modo detached (segundo plano)
---force-recreate	Recria os containers mesmo sem mudanças
-5.2. Parando a Aplicação
-bash
+5.2. Parando a Aplicação</br>
+```bash
 docker compose down -v
+```
 5.3. Reconstruindo Imagens
-bash
+```bash
 docker compose build
 docker compose up -d --force-recreate
+```
 6. Acessando a Aplicação
 Serviço	URL
 API Backend	http://localhost:3000
