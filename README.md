@@ -63,10 +63,12 @@ Este projeto é composto por:
 │       └── init.sql             # Script SQL de inicialização
 └── docker-compose.yml           # Arquivo de orquestração
 ```
-4. Configuração do Ambiente
-4.1. Variáveis de Ambiente
-Backend (api-products/.env)
+4. Configuração do Ambiente</br>
+4.1. Variáveis de Ambiente</br>
+Backend (api-products/.env)</br>
+
 env
+```text
 DB_HOST=postgres_db
 DB_PORT=5432
 DB_USER=docker_user
@@ -79,6 +81,7 @@ yaml
 environment:
   WAIT_FOR_API: "true"
   API_URL: "http://api_products:3000"
+```
 5. Como Rodar a Aplicação
 5.1. Iniciando com Docker Compose
 bash
