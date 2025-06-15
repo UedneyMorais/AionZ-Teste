@@ -79,8 +79,9 @@ DB_NAME=product_db
 5.1. Iniciando com Docker Compose</br>
 ```bash
 docker compose up --build -d --force-recreate
-https://img.shields.io/badge/Comando-docker_compose_up-2496ED?style=flat
 ```
+https://img.shields.io/badge/Comando-docker_compose_up-2496ED?style=flat
+
 Parâmetro	Descrição</br>
 --build	Constrói imagens a partir dos Dockerfiles</br>
 -d	Executa em modo detached (segundo plano)</br>
