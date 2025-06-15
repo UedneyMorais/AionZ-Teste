@@ -96,11 +96,16 @@ docker compose down -v
 docker compose build
 docker compose up -d --force-recreate
 ```
+Ou rode
+```bash
+docker compose down -v && docker compose up -d --force-recreate
+```
+
 6. Acessando a Aplicação</br>
 Serviço	URL</br>
 API Backend	http://localhost:3000</br>
-Health Check	http://localhost:3000/health</br>
 Frontend	http://localhost:4000</br>
+Health Check	http://localhost:3000/health</br>
 
 7. Desenvolvimento (Para Contribuidores)</br>
 7.1. Backend (API Products)</br>
@@ -118,6 +123,9 @@ npm run start
 ```
 
 8. Considerações Importantes
+Existem algumas imagens dentro de IonZ-Teste/front-products/assets para teste.
+Existe o arquivo products.txt com alguns produtos e insomnia em /home/dev/Documents/teste/IonZ-Teste/api-products/docs 
+
 https://img.shields.io/badge/Importante!-yellow?style=flat
 
 Healthchecks configurados para evitar race conditions
