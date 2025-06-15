@@ -1,0 +1,211 @@
+/* product-form.component.scss */
+
+.product-form-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 2em;
+  font-weight: 600;
+}
+
+.form-group {
+  margin-bottom: 20px;
+
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+    font-size: 0.95em;
+  }
+
+  input[type='text'],
+  input[type='number'],
+  textarea {
+    width: calc(100% - 20px); /* 100% menos o padding */
+    padding: 12px 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1em;
+    color: #333;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+    &:focus {
+      border-color: #007bff;
+      box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+      outline: none;
+    }
+  }
+
+  textarea {
+    resize: vertical; /* Permite redimensionar verticalmente */
+    min-height: 100px;
+  }
+
+  input[type='file'] {
+    padding: 8px 0; /* Ajuste o padding para files */
+  }
+}
+
+.error-message {
+  color: #dc3545; /* Vermelho para mensagens de erro */
+  font-size: 0.85em;
+  margin-top: 5px;
+  font-weight: 500;
+}
+
+.image-preview-container {
+  margin-top: 15px;
+  text-align: center;
+
+  .image-preview {
+    max-width: 100%;
+    height: auto;
+    max-height: 200px; /* Limite a altura da pré-visualização */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  }
+}
+
+.no-image-selected {
+  margin-top: 10px;
+  font-style: italic;
+  color: #888;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+
+button[type='submit'] {
+  width: 100%;
+  padding: 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 20px;
+
+  &:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+  }
+
+  &:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    transform: none;
+  }
+}
+
+.cancel-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #6c757d; // Cinza para o botão cancelar
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1em;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px; // Espaço entre o botão de submit e o cancelar
+
+  &:hover {
+    background-color: #5a6268;
+  }
+}
+
+/* Responsividade básica para telas menores */
+@media (max-width: 768px) {
+  .product-form-container {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 1.8em;
+  }
+
+  button[type='submit'],
+  .cancel-button {
+    font-size: 1em;
+    padding: 12px;
+  }
+}
+
+.success-message {
+  text-align: center;
+  padding: 30px 20px;
+  background-color: #d4edda; // Verde claro
+  color: #155724; // Verde escuro
+  border: 1px solid #c3e6cb;
+  border-radius: 8px;
+  margin-top: 20px;
+  animation: fadeIn 0.5s ease-out;
+
+  p {
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+
+  .action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+
+    button {
+      padding: 12px 20px;
+      font-size: 1em;
+      font-weight: 600;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+
+      &:hover {
+        transform: translateY(-2px);
+      }
+    }
+
+    .view-product-btn {
+      background-color: #28a745; // Verde primário
+      color: white;
+
+      &:hover {
+        background-color: #218838;
+      }
+    }
+
+    .back-to-list-btn {
+      background-color: #007bff; // Azul primário
+      color: white;
+
+      &:hover {
+        background-color: #0056b3;
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+

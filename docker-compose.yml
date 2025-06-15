@@ -1,0 +1,76 @@
+services:
+  postgres_db:
+    image: postgres:14-alpine
+    container_name: product_postgres
+    restart: always
+    environment:
+      POSTGRES_DB: product_db
+      POSTGRES_USER: docker_user
+      POSTGRES_PASSWORD: docker_password
+    volumes:
+      - ./docker/postgres/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+    networks:
+      - app_network
+
+  api_products:
+    build:
+      context: ./api-products
+      dockerfile: ../docker/api-products/Dockerfile
+    container_name: api_products_backend
+    restart: always
+    environment:
+      DB_HOST: postgres_db
+      DB_PORT: 5432
+      DB_USER: ${DB_USER:-docker_user}
+      DB_PASSWORD: ${DB_PASSWORD:-docker_password}
+      DB_NAME: ${DB_NAME:-product_db}
+      NODE_ENV: production
+    ports:
+      - "3000:3000"
+    depends_on:
+      postgres_db:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "wget --no-verbose --tries=1 --spider http://localhost:3000/health || exit 1"]
+      interval: 15s
+      timeout: 10s
+      retries: 5
+      start_period: 180s  # Aumentado para 3 minutos
+    volumes:
+      - ./api-products/.env:/app/.env
+    networks:
+      - app_network
+
+  front_products:
+    build:
+      context: ./front-products
+      dockerfile: ../docker/front-products/Dockerfile
+    container_name: front_products_frontend
+    restart: always
+    ports:
+      - "4000:4000"
+    depends_on:
+      api_products:
+        condition: service_healthy
+    environment:
+      # Adicionar variável para esperar a API
+      WAIT_FOR_API: "true"
+      API_URL: "http://api_products:3000"
+    networks:
+      - app_network
+
+volumes:
+  postgres_data:
+
+networks:
+  app_network:
+    driver: bridge

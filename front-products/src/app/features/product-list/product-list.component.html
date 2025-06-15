@@ -1,0 +1,33 @@
+<div class="product-list-container">
+  <div class="header-section">
+    <h1>Nossos Produtos</h1>
+    <button [routerLink]="['/products', 'new']" class="add-product-btn">
+      <span class="icon">&#x2795;</span> Adicionar Novo Produto
+    </button>
+  </div>
+
+  <div *ngIf="isLoading$ | async" class="loading-spinner">
+    <div class="spinner"></div>
+    <p>Carregando produtos...</p>
+  </div>
+
+  <div *ngIf="errorMessage$ | async as errorMessage" class="error-message">
+    <p>{{ errorMessage }}</p>
+    <button (click)="loadProducts()" class="retry-btn">Tentar Novamente</button>
+  </div>
+
+  <div *ngIf="products$ | async as products; else noProducts" class="product-grid">
+    @for (product of products; track product.id) {
+      <app-product-card [product]="product" (deleteProduct)="onDeleteProduct($event)"></app-product-card>
+    }
+  </div>
+
+  <ng-template #noProducts>
+    <div *ngIf="!(isLoading$ | async) && !(errorMessage$ | async)" class="no-products-message">
+      <p>Nenhum produto encontrado. Que tal adicionar um?</p>
+      <button [routerLink]="['/products', 'new']" class="add-product-btn-empty-state">
+        Adicionar Primeiro Produto
+      </button>
+    </div>
+  </ng-template>
+</div>

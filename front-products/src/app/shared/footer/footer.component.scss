@@ -1,0 +1,120 @@
+.site-footer {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 40px 0 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+  margin-bottom: 30px;
+  padding: 0 15px;
+}
+
+.footer-section h3 {
+  color: #f39c12;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.footer-section p {
+  color: #bdc3c7;
+  line-height: 1.6;
+  margin: 10px 0;
+}
+
+.footer-section i {
+  margin-right: 10px;
+  color: #f39c12;
+}
+
+.social-icons {
+  margin-top: 15px;
+}
+
+.social-icons a {
+  display: inline-block;
+  color: #ecf0f1;
+  font-size: 1.5rem;
+  margin-right: 15px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #f39c12;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #1a252f;
+  margin-top: 30px;
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: #95a5a6;
+  font-size: 0.9rem;
+}
+
+.footer-bottom strong {
+  color: #f39c12;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .footer-section {
+    flex: 100%;
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}
+
+.footer-bottom {
+  display: flex;
+  flex-direction: column; /* Organiza os itens em coluna */
+  align-items: center;   /* Centraliza horizontalmente */
+  padding: 10px 20px;
+  background-color: #1a1a1a; /* Cor de fundo escura para o rodapé */
+  color: #cccccc; /* Cor do texto */
+  font-size: 0.9em;
+  text-align: center;
+
+  p {
+    margin-bottom: 10px; /* Espaço entre o texto e os ícones */
+  }
+
+  strong {
+    color: #ffffff; /* Destaque para o nome do criador */
+  }
+}
+
+.social-links {
+  display: flex;
+  gap: 15px; /* Espaço entre os ícones */
+  margin-top: 10px; /* Espaço acima dos ícones */
+
+  a {
+    color: #cccccc; /* Cor padrão dos ícones */
+    font-size: 1.8em; /* Tamanho dos ícones */
+    transition: color 0.3s ease, transform 0.3s ease; /* Transição suave */
+
+    &:hover {
+      color: #2e8b57; /* Cor ao passar o mouse (verde do cabeçalho) */
+      transform: translateY(-3px); /* Pequeno efeito de elevação */
+    }
+  }
+}

@@ -1,0 +1,70 @@
+<div class="product-form-container">
+  <h2>{{ isEditMode ? 'Editar Produto' : 'Novo Produto' }}</h2>
+
+  <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Nome:</label>
+      <input type="text" id="name" formControlName="name" />
+      <div
+        *ngIf="
+          productForm.get('name')?.invalid && productForm.get('name')?.touched
+        "
+        class="error-message"
+      >
+        Nome é obrigatório.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="description">Descrição:</label>
+      <textarea id="description" formControlName="description"></textarea>
+      <div
+        *ngIf="
+          productForm.get('description')?.invalid &&
+          productForm.get('description')?.touched
+        "
+        class="error-message"
+      >
+        Descrição é obrigatória.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="price">Preço:</label>
+      <input
+        type="number"
+        id="price"
+        formControlName="price"
+        step="0.01"
+        min="0.01"
+      />
+      <div
+        *ngIf="
+          productForm.get('price')?.invalid && productForm.get('price')?.touched
+        "
+        class="error-message"
+      >
+        Preço é obrigatório e deve ser maior que zero.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="image">Imagem:</label>
+      <input type="file" id="image" (change)="onFileSelected($event)" />
+      <div
+        *ngIf="imagePreview"
+        class="image-preview-container"
+      >
+        <img [src]="imagePreview" alt="Pré-visualização da Imagem" class="image-preview" />
+      </div>
+      <div *ngIf="!imagePreview && isEditMode && productForm.pristine" class="no-image-selected">
+        Nenhuma nova imagem selecionada. Usando imagem existente.
+      </div>
+    </div>
+
+    <button type="submit" [disabled]="productForm.invalid">
+      {{ isEditMode ? 'Salvar Alterações' : 'Criar Produto' }}
+    </button>
+    <button type="button" (click)="router.navigate(['/products'])" class="cancel-button">Cancelar</button>
+  </form>
+</div>

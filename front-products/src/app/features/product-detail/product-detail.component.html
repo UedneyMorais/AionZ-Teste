@@ -1,0 +1,44 @@
+<div *ngIf="product$ | async as product; else loadingOrNotFound" class="product-detail-container">
+  <div class="product-header">
+    <button [routerLink]="['/products']" class="back-button">
+      &larr; Voltar para a Lista
+    </button>
+    <h1>{{ product.name }}</h1>
+  </div>
+
+  <div class="product-content">
+    <div class="product-gallery">
+      <img [src]="fullImagePath" [alt]="product.name" class="main-image">
+    </div>
+
+    <div class="product-info">
+      <div class="price-section">
+        <p class="current-price">{{ product.price | currency:'BRL' }}</p>
+      </div>
+
+      <div class="product-description">
+        <h3>Descrição do Produto:</h3> <p>{{ product.description }}</p>
+      </div>
+
+      <div class="product-actions-details">
+        <button [routerLink]="['/products/edit', product.id]" class="edit-button">
+          Editar Produto
+        </button>
+      </div>
+
+      <div class="product-meta">
+        <div class="url-section">
+          <h3>URL da Página:</h3>
+          <code>{{ currentUrl }}</code>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #loadingOrNotFound>
+  <div class="message-container">
+    <p *ngIf="!(product$ | async)">Carregando detalhes do produto...</p>
+    <p *ngIf="!(product$ | async) && currentUrl === 'Produto não encontrado.'">Produto não encontrado ou ID inválido.</p>
+  </div>
+</ng-template>

@@ -1,0 +1,216 @@
+type: collection.insomnia.rest/5.0
+name: Estudos
+meta:
+  id: wrk_06f0116b9cc0459c9d344ecf9857e423
+  created: 1749499261365
+  modified: 1749499261365
+  description: ""
+collection:
+  - name: task-manager
+    meta:
+      id: fld_b51e6c45cf5a43bcafcb848434a77218
+      created: 1749499278582
+      modified: 1749499278582
+      sortKey: -1749499278582
+      description: ""
+  - name: api-products
+    meta:
+      id: fld_005e75f5d4a74cd09f1a30efc1282764
+      created: 1749767662127
+      modified: 1749821895656
+      sortKey: -1748630134240
+      description: ""
+    children:
+      - url: http://localhost:3000/products
+        name: findAll
+        meta:
+          id: req_d3504e43142440ef81deaf27ee3100c2
+          created: 1749767662129
+          modified: 1749821941871
+          isPrivate: false
+          description: ""
+          sortKey: -1749499283808
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/products/12
+        name: findOneByID
+        meta:
+          id: req_b8831e28bd81447d86175a952131a449
+          created: 1749767662131
+          modified: 1749904415420
+          isPrivate: false
+          description: ""
+          sortKey: -1748630208832.5
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/products/edit/13
+        name: updateByID
+        meta:
+          id: req_4bf575d18b644c5687d4e2ee5095a53b
+          created: 1749767662132
+          modified: 1749910153516
+          isPrivate: false
+          description: ""
+          sortKey: -1748195671344.75
+        method: PATCH
+        body:
+          mimeType: multipart/form-data
+          params:
+            - id: pair_49ef4c2c58344ed1a48f970a558589a4
+              name: name
+              value: Açucar EDT
+              description: ""
+              disabled: false
+            - id: pair_040228e2a62f4fd6a226dba530490203
+              name: description
+              value: Descrição do Açucar EDT
+              description: ""
+              disabled: false
+            - id: pair_3e729918c0e6476b899df216bfb7b5fa
+              name: price
+              value: "6.49"
+              description: ""
+              disabled: false
+            - id: pair_1bfb128e169c4041b7830bdb489427d6
+              name: image
+              value: ""
+              description: ""
+              disabled: false
+              type: file
+              fileName: /home/dev/Downloads/COCA.jpg
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/products/new
+        name: create
+        meta:
+          id: req_4266a83558d74bbaa18cb6586bd2af22
+          created: 1749767662133
+          modified: 1749910064900
+          isPrivate: false
+          description: ""
+          sortKey: -1747978402600.875
+        method: POST
+        body:
+          mimeType: multipart/form-data
+          params:
+            - name: name
+              value: "Torneira velha "
+              id: pair_fe626503043f4397a611992192815f31
+            - id: pair_f69e90f29eb74a01afc8420721042109
+              name: description
+              value: A torneira muito velha
+              description: ""
+              disabled: false
+            - id: pair_5b4c6ca3b70e4fce987a4ca2bcbdce67
+              name: price
+              value: "18.11"
+              description: ""
+              disabled: false
+            - id: pair_3f5d668f6bd845048c177a3658202d3c
+              name: image
+              value: ""
+              description: ""
+              disabled: false
+              type: file
+              fileName: /home/dev/Downloads/torneira.jpg
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+          - name: User-Agent
+            value: insomnia/11.2.0
+        scripts:
+          preRequest: ""
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/products/delete/25
+        name: deleteById
+        meta:
+          id: req_84d108dfa33a4d5281943797dd8cce47
+          created: 1749767662134
+          modified: 1749913750578
+          isPrivate: false
+          description: ""
+          sortKey: -1747869768228.9375
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/products/slug/acucar
+        name: findOneBySlug
+        meta:
+          id: req_094317c33dad4a6688e6db889353028f
+          created: 1749903874890
+          modified: 1749904204388
+          isPrivate: false
+          description: ""
+          sortKey: -1748412940088.625
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_a6e984d5ece6ef71eb0d6fcba61bb00612eefd08
+    created: 1749499261369
+    modified: 1749499261369
+environments:
+  name: Base Environment
+  meta:
+    id: env_a6e984d5ece6ef71eb0d6fcba61bb00612eefd08
+    created: 1749499261367
+    modified: 1749499261367
+    isPrivate: false
