@@ -1,0 +1,61 @@
+Nome: Fertilizante NPK 10-10-10 Universal
+Descrição: Adubo completo para diversas culturas, promovendo crescimento equilibrado e maior produtividade. Ideal para pré-plantio e cobertura.
+Preço: 120.50
+Imagem: Um saco de fertilizante NPK.
+Slug: fertilizante-npk-10-10-10-universal
+Semente de Milho Híbrido
+
+Nome: Semente de Milho Híbrido AG-88
+Descrição: Sementes de milho de alta produtividade, resistentes a pragas e doenças comuns, adaptadas a diferentes tipos de solo.
+Preço: 350.00
+Imagem: Um pacote de sementes de milho.
+Slug: semente-de-milho-hibrido-ag-88
+Pulverizador Costal Manual
+
+Nome: Pulverizador Costal Manual 20 Litros
+Descrição: Equipamento robusto e ergonômico para aplicação de defensivos agrícolas em pequenas e médias áreas. Bomba de pistão de alta pressão.
+Preço: 285.90
+Imagem: Uma pessoa usando um pulverizador costal.
+Slug: pulverizador-costal-manual-20-litros
+Bota de Segurança Agrícola
+
+Nome: Bota de Segurança Impermeável - Cano Longo
+Descrição: Bota de PVC com solado antiderrapante e forro interno, ideal para proteção em ambientes úmidos e com exposição a produtos químicos agrícolas.
+Preço: 95.00
+Imagem: Um par de botas de segurança.
+Slug: bota-de-seguranca-impermeavel-cano-longo
+Óleo Lubrificante para Máquinas Agrícolas
+
+Nome: Óleo Lubrificante Diesel 15W-40 (20L)
+Descrição: Óleo mineral de alta performance para motores diesel de tratores, colheitadeiras e outros equipamentos agrícolas, garantindo maior vida útil.
+Preço: 210.00
+Imagem: Um galão de 20 litros de óleo lubrificante.
+Slug: oleo-lubrificante-diesel-15w-40-20l
+Cerca Elétrica Rural (Kit Completo)
+
+Nome: Kit Cerca Elétrica Rural - 100 Metros
+Descrição: Conjunto completo para eletrificação de cercas, incluindo eletrificador, isoladores, fio e hastes. Ideal para contenção de gado.
+Preço: 780.00
+Imagem: Componentes de um kit de cerca elétrica.
+Slug: kit-cerca-eletrica-rural-100-metros
+Medidor de Umidade de Grãos Digital
+
+Nome: Medidor de Umidade de Grãos Digital Portátil
+Descrição: Aparelho de alta precisão para aferir o teor de umidade em diversos tipos de grãos (milho, soja, arroz), essencial para colheita e armazenagem.
+Preço: 540.00
+Imagem: Um medidor de umidade digital.
+Slug: medidor-de-umidade-de-graos-digital-portatil
+Rede para Silagem (Manta Plástica)
+
+Nome: Manta Plástica para Silagem 8x50 Metros
+Descrição: Plástico de alta resistência e durabilidade para cobertura de silos, protegendo a forragem da chuva, vento e raios UV.
+Preço: 450.00
+Imagem: Um rolo de manta plástica para silagem.
+Slug: manta-plastica-para-silagem-8x50-metros
+Vaca Leiteira (Virtual)
+
+Nome: Vaca Leiteira Holandesa de Alta Produtividade (Virtual)
+Descrição: Exemplo de cadastro de um "produto" mais complexo ou abstrato no agronegócio, representando um animal para fins de demonstração na API.
+Preço: 8500.00
+Imagem: Uma vaca da raça Holandesa.
+Slug: vaca-leiteira-holandesa-alta-produtividade
