@@ -122,14 +122,9 @@ npm install
 npm run start
 ```
 
-8. Considerações Importantes
-Existem algumas imagens dentro de IonZ-Teste/front-products/assets para teste.
-Existe o arquivo products.txt com alguns produtos e insomnia em /home/dev/Documents/teste/IonZ-Teste/api-products/docs 
-
-https://img.shields.io/badge/Importante!-yellow?style=flat
-
-Healthchecks configurados para evitar race conditions
-
-Volume postgres_data persiste dados do PostgreSQL
-
-Rede Docker app_network permite comunicação entre serviços
+8. Considerações Importantes</br>
+Healthchecks configurados para evitar race conditions</br>
+Volume postgres_data persiste dados do PostgreSQL</br>
+Rede Docker app_network permite comunicação entre serviços</br>
+Existem algumas imagens dentro de IonZ-Teste/front-products/assets para teste.</br>
+Existe o arquivo products.txt com alguns produtos e insomnia em /home/dev/Documents/teste/IonZ-Teste/api-products/docs </br>
