@@ -80,7 +80,7 @@ DB_NAME=product_db
 ```bash
 docker compose up --build -d --force-recreate
 ```
-https://img.shields.io/badge/Comando-docker_compose_up-2496ED?style=flat
+![Docker](https://img.shields.io/badge/Requisitos-Docker-2496ED?style=flat)
 
 Parâmetro	Descrição</br>
 --build	Constrói imagens a partir dos Dockerfiles</br>
@@ -96,22 +96,27 @@ docker compose down -v
 docker compose build
 docker compose up -d --force-recreate
 ```
-6. Acessando a Aplicação
-Serviço	URL
-API Backend	http://localhost:3000
-Health Check	http://localhost:3000/health
-Frontend	http://localhost:4000
-7. Desenvolvimento (Para Contribuidores)
-7.1. Backend (API Products)
-bash
+6. Acessando a Aplicação</br>
+Serviço	URL</br>
+API Backend	http://localhost:3000</br>
+Health Check	http://localhost:3000/health</br>
+Frontend	http://localhost:4000</br>
+
+7. Desenvolvimento (Para Contribuidores)</br>
+7.1. Backend (API Products)</br>
+```bash
 cd api-products
 npm install
 npm run start:dev
+```
+
 7.2. Frontend (Front Products)
-bash
+```bash
 cd front-products
 npm install
 npm run start
+```
+
 8. Considerações Importantes
 https://img.shields.io/badge/Importante!-yellow?style=flat
 
