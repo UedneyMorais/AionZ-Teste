@@ -88,11 +88,11 @@ Parâmetro	Descrição</br>
 -d	Executa em modo detached (segundo plano)</br>
 --force-recreate	Recria os containers mesmo sem mudanças</br>
 
-## 5.2. Parando a Aplicação
+5.2. Parando a Aplicação
 ```bash
 docker compose down -v
 ```
-## 5.3. Reconstruindo Imagens
+5.3. Reconstruindo Imagens
 ```bash
 docker compose build
 docker compose up -d --force-recreate
