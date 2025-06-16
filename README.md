@@ -16,7 +16,6 @@ Este repositório contém os códigos-fonte do projeto de Produtos, que inclui u
 - [Configuração do Ambiente](#4-configuração-do-ambiente)
 - [Como Rodar a Aplicação](#5-como-rodar-a-aplicação)
 - [Acessando a Aplicação](#6-acessando-a-aplicação)
-- [Desenvolvimento](#7-desenvolvimento-para-contribuidores)
 - [Considerações Importantes](#8-considerações-importantes)
 
 ## 1. Visão Geral
