@@ -1,5 +1,3 @@
-// src/app/core/services/product.service.ts
-
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Inject, inject, Injectable, PLATFORM_ID } from '@angular/core';
 import { Observable, throwError, catchError, map } from 'rxjs';
@@ -16,7 +14,6 @@ import { isPlatformServer } from '@angular/common';
   providedIn: 'root'
 })
 export class ProductService {
-  //private apiUrl = 'http://localhost:3000/products';
   private apiUrl: string;
 
   constructor(
@@ -25,10 +22,8 @@ export class ProductService {
   ) {
     if(isPlatformServer(this.platformId)){
       this.apiUrl = process.env['API_INTERNAL_URL'] || 'http://api_products_backend:3000/products';
-      console.log('ProductService (SSR): Usando API_INTERNAL_URL:', this.apiUrl);
     }else {
       this.apiUrl = 'http://localhost:3000/products';
-      console.log('ProductService (Browser): Usando localhost API URL:', this.apiUrl);
     }
   }
 

@@ -30,7 +30,7 @@ export class AppController {
               <a href="/api" target="_blank">Acessar Documentação Swagger</a>
             </body>
             </html>
-          `, // Um exemplo do conteúdo HTML retornado
+          `,
         },
       },
     },

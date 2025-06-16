@@ -49,12 +49,11 @@ export class HealthController {
     },
   })
   checkHealth() {
-    // Implementação real da verificação de saúde
     return {
       status: 'OK',
       timestamp: new Date().toISOString(),
       uptime: process.uptime(),
-      database: 'connected', // Você verificaria a conexão real com o DB aqui
+      database: 'connected',
     };
   }
 }

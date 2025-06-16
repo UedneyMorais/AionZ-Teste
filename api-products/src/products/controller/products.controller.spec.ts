@@ -5,7 +5,7 @@ import { ProductsController } from './products.controller';
 
 describe('ProductsController', () => {
   let controller: ProductsController;
-  let service: ProductsService; // Opcional, mas útil para espiar chamadas
+  let service: ProductsService;
 
   const mockProductRepository = {
     find: jest.fn(),
@@ -27,7 +27,7 @@ describe('ProductsController', () => {
     }).compile();
 
     controller = module.get<ProductsController>(ProductsController);
-    service = module.get<ProductsService>(ProductsService); // Obtenha o serviço para espiar chamadas, se precisar
+    service = module.get<ProductsService>(ProductsService);
   });
 
   it('should be defined', () => {

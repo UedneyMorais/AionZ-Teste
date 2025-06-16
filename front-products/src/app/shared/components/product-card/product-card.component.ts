@@ -1,8 +1,8 @@
-import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core'; // Adicione OnInit
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { CommonModule, CurrencyPipe } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
-import { Product } from '../../../core/models/product.model'; // Ajuste o caminho se for diferente
+import { Product } from '../../../core/models/product.model';
 import { getFullPathImage } from '../../../core/utils/url-path.utils';
 import { ProductService } from '../../../core/services/product/product.service';
 

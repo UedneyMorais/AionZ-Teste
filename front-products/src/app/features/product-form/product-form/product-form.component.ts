@@ -1,5 +1,3 @@
-// src/app/features/product-form/product-form/product-form.component.ts
-
 import { Component, OnInit } from '@angular/core';
 import { CommonModule, CurrencyPipe } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -27,7 +25,7 @@ export class ProductFormComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private route: ActivatedRoute,
-    public router: Router, // Mantido como 'public' para o botão Cancelar
+    public router: Router,
     private productService: ProductService
   ) {
     this.productForm = this.fb.group({
@@ -91,18 +89,13 @@ onSubmit(): void {
     productData.append('name', this.productForm.value.name);
     productData.append('description', this.productForm.value.description);
 
-    // --- MUDANÇA AQUI: TRATAMENTO DO PREÇO ---
     let priceValue = this.productForm.value.price;
 
-    // Se o valor for uma string e contiver vírgula, substitua por ponto
     if (typeof priceValue === 'string' && priceValue.includes(',')) {
       priceValue = priceValue.replace(',', '.');
     }
-    // Garante que é um número antes de converter para string para o FormData
-    // Se ele já é um número, .toString() funcionará. Se era uma string convertida, parseFloat a transformará.
-    productData.append('price', parseFloat(priceValue).toString());
-    // --- FIM DA MUDANÇA NO PREÇO ---
 
+    productData.append('price', parseFloat(priceValue).toString());
 
     if (this.selectedFile) {
       productData.append('image', this.selectedFile);

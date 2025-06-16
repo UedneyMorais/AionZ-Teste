@@ -52,9 +52,7 @@ export const multerOptions = {
     },
   }),
   fileFilter: (req, file, cb) => {
-    // Filtro para permitir apenas arquivos de imagem
     if (!file.originalname.match(/\.(jpg|jpeg|png|gif)$/i)) {
-      // Adicionado 'i' para case-insensitive
       return cb(
         new BadRequestException(
           'Apenas arquivos de imagem (JPG, JPEG, PNG, GIF) são permitidos!',

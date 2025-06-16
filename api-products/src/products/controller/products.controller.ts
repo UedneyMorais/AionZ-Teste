@@ -37,11 +37,11 @@ export class ProductsController {
    * @returns A Promise that resolves to the newly created Product entity.
    */
   @Post('/new')
-  @ApiOperation({ summary: 'Create a new product' }) // Added summary for clarity
+  @ApiOperation({ summary: 'Create a new product' })
   @ApiResponse({
     status: 201,
     description: 'The product has been successfully created.',
-    type: Product, // Specify the return type for better documentation
+    type: Product,
   })
   @ApiResponse({
     status: 400,
@@ -66,7 +66,7 @@ export class ProductsController {
         },
         price: {
           type: 'number',
-          format: 'float', // Use format for numbers with decimals
+          format: 'float',
           description: 'The price of the product.',
           example: 299.99,
         },
@@ -76,7 +76,7 @@ export class ProductsController {
           description: 'The product image file (JPG, JPEG, PNG, GIF).',
         },
       },
-      required: ['name', 'description', 'price', 'image'], // Explicitly list required fields
+      required: ['name', 'description', 'price', 'image'],
     },
   })
   create(
@@ -118,7 +118,7 @@ export class ProductsController {
   @ApiParam({
     name: 'id',
     description: 'The unique identifier of the product.',
-    type: Number, // Specify type for path parameter
+    type: Number,
     example: 1,
   })
   @ApiResponse({

@@ -1,35 +1,31 @@
-/* src/app/features/product-detail/product-detail.component.scss */
-
 .product-detail-container {
   display: grid;
-  grid-template-columns: 1fr; /* Padrão para mobile: uma coluna */
+  grid-template-columns: 1fr;
   gap: 2rem;
   padding: 2rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* Organiza a imagem e as informações lado a lado em telas maiores */
 .product-content {
   display: grid;
-  grid-template-columns: 1fr; /* Mobile: imagem em cima, info embaixo */
-  gap: 2rem; /* Espaçamento entre a imagem e o texto */
+  grid-template-columns: 1fr;
+  gap: 2rem;
 
   @media (min-width: 768px) {
-    grid-template-columns: 1fr 1fr; /* Desktop: imagem (1fr) e info (1fr) */
-    align-items: start; /* Alinha o conteúdo ao topo das colunas */
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
   }
 }
 
 .product-header {
-  /* Estilos para o botão de voltar e o título do produto */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   margin-bottom: 1.5rem;
 
   h1 {
-    font-size: 2.5rem; /* Um pouco maior para o título principal */
+    font-size: 2.5rem;
     color: #333;
     margin-top: 1rem;
     margin-bottom: 0;
@@ -53,23 +49,19 @@
 }
 
 .product-gallery {
-  /* Esta div agora é a primeira coluna do .product-content */
   .main-image {
     width: 100%;
-    height: auto; /* Garante que a imagem mantenha a proporção */
+    height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    object-fit: contain; /* Garante que a imagem seja contida dentro do espaço, sem cortar */
+    object-fit: contain;
   }
 }
 
 .product-info {
-  /* Esta div é a segunda coluna do .product-content, contendo os textos e botões */
-  padding-top: 0; /* Remove padding-top se houver do CSS antigo */
+  padding-top: 0;
 
   .product-title {
-    /* Se você ainda tiver um título dentro de .product-info, estilize-o aqui */
-    /* No seu HTML, o H1 está fora de .product-info, então esta regra pode não ser aplicada */
     font-size: 2rem;
     margin-bottom: 1rem;
     color: #333;
@@ -93,13 +85,13 @@
       color: #444;
     }
     p {
-        margin: 0; /* Remove margem padrão de parágrafo se houver */
+        margin: 0;
     }
   }
 
   .product-actions-details {
-    margin-top: 1.5rem; /* Espaço antes dos botões */
-    display: flex; /* Se houver mais de um botão, alinhe-os */
+    margin-top: 1.5rem;
+    display: flex;
     gap: 1rem;
 
     .edit-button {
@@ -116,13 +108,12 @@
             background-color: #0056b3;
         }
     }
-    /* Adicione estilos para outros botões se houver */
   }
 
   .product-meta {
     margin-top: 2rem;
     padding-top: 1.5rem;
-    border-top: 1px solid #eee; /* Linha divisória */
+    border-top: 1px solid #eee;
 
     .url-section {
       margin-top: 1rem;
@@ -130,7 +121,7 @@
       color: #666;
 
       h3 {
-        font-size: 1rem; /* Ajuste o tamanho do título da URL */
+        font-size: 1rem;
         margin-bottom: 0.5rem;
         color: #555;
       }
@@ -140,7 +131,7 @@
         padding: 0.2rem 0.4rem;
         border-radius: 4px;
         word-break: break-all;
-        display: block; /* Garante que o código ocupe sua própria linha */
+        display: block;
       }
     }
   }

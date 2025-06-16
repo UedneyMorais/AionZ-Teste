@@ -3,7 +3,6 @@ import { Injectable } from '@nestjs/common';
 @Injectable()
 export class AppService {
   getHello(): string {
-    // Retorna uma string HTML simples
     return `
       <!DOCTYPE html>
       <html lang="pt-BR">

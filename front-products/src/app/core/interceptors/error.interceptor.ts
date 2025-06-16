@@ -8,8 +8,7 @@ import {
 } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { catchError } from 'rxjs/operators';
-import { ErrorHandlingService } from '../services/error/error-handling.service'; // Ajuste o caminho
-
+import { ErrorHandlingService } from '../services/error/error-handling.service';
 @Injectable()
 export class ErrorInterceptor implements HttpInterceptor {
 

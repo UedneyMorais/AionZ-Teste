@@ -16,7 +16,7 @@ import { HealthController } from './health/health.controller';
 @Module({
   imports: [
     ConfigModule.forRoot({
-      isGlobal: true, // faz o ConfigModule ser global
+      isGlobal: true,
     }),
     TypeOrmModule.forRootAsync({
       imports: [ConfigModule],
@@ -48,11 +48,7 @@ import { HealthController } from './health/health.controller';
     }),
     ProductsModule,
     ServeStaticModule.forRoot({
-      // `rootPath` aponta para onde a pasta 'uploads' está fisicamente no seu servidor.
-      // `join(__dirname, '..', 'uploads')` resolve para a pasta 'uploads' na raiz do seu projeto NestJS.
       rootPath: join(__dirname, '..', 'uploads'),
-      // `serveRoot` define o prefixo da URL que será usado para acessar esses arquivos.
-      // Ou seja, se a imagem está em /uploads/minha-imagem.png, ela será acessível via http://localhost:3000/uploads/minha-imagem.png
       serveRoot: '/uploads/',
     }),
   ],

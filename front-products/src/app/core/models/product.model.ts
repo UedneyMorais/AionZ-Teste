@@ -17,6 +17,5 @@ export function productFromDto(dto: ProductResponseDto): Product {
     description: dto.description,
     price: typeof dto.price === 'string' ? parseFloat(dto.price) : dto.price,
     imagePath: dto.imagePath
-    // Ignora campos que não existem no Model (createdAt, updatedAt)
   };
 }

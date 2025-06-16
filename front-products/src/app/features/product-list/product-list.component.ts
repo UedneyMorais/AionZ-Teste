@@ -1,5 +1,3 @@
-// src/app/features/product-list/product-list.component.ts
-
 import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';

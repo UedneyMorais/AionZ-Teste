@@ -1,13 +1,26 @@
-/* src/app/features/product-list/product-list.component.scss */
+$primary-blue: #3498db;
+$darker-blue: #2980b9;
+$soft-gray: #f8f9fa;
+$medium-gray: #e0e0e0;
+$dark-text: #2c3e50;
+$light-gray-text: #666;
+$medium-gray-text: #777;
+$error-red: #c62828;
+$darker-error-red: #b71c1c;
+$success-green: #27ae60;
+$darker-success-green: #229954;
+$border-light: #ddd;
+$error-bg: #ffebee;
+$error-border: #ef9a9a;
 
 .product-list-container {
   max-width: 1200px;
   margin: 40px auto;
   padding: 20px;
-  background-color: #f8f9fa; // Um fundo claro para a página
+  background-color: $soft-gray;
   border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08); // Sombra suave
-  animation: fadeIn 0.8s ease-out; // Animação de fade in
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 0.8s ease-out;
 }
 
 @keyframes fadeIn {
@@ -27,18 +40,18 @@
   align-items: center;
   margin-bottom: 30px;
   padding-bottom: 15px;
-  border-bottom: 2px solid #e0e0e0; // Linha divisória
+  border-bottom: 2px solid $medium-gray;
 }
 
 h1 {
   font-size: 2.8em;
-  color: #2c3e50; // Cor escura para o título
+  color: $dark-text;
   margin: 0;
   font-weight: 700;
 }
 
 .add-product-btn {
-  background-color: #3498db; // Azul vibrante
+  background-color: $primary-blue;
   color: white;
   padding: 12px 25px;
   border: none;
@@ -52,8 +65,8 @@ h1 {
   transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
 
   &:hover {
-    background-color: #2980b9; // Azul mais escuro no hover
-    transform: translateY(-2px); // Efeito de elevação
+    background-color: $darker-blue;
+    transform: translateY(-2px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   }
 
@@ -64,12 +77,11 @@ h1 {
 
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); // Grid responsivo
-  gap: 25px; // Espaçamento entre os cartões
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
   padding: 10px;
 }
 
-// Estilos para spinner de carregamento
 .loading-spinner {
   text-align: center;
   padding: 50px;
@@ -77,7 +89,7 @@ h1 {
   color: #555;
   .spinner {
     border: 4px solid rgba(0, 0, 0, 0.1);
-    border-left-color: #3498db;
+    border-left-color: $primary-blue;
     border-radius: 50%;
     width: 40px;
     height: 40px;
@@ -85,7 +97,7 @@ h1 {
     margin: 0 auto 15px auto;
   }
   p {
-    color: #666;
+    color: $light-gray-text;
   }
 }
 
@@ -94,18 +106,17 @@ h1 {
   100% { transform: rotate(360deg); }
 }
 
-// Estilos para mensagens de erro
 .error-message {
-  background-color: #ffebee; // Vermelho claro
-  color: #c62828; // Vermelho escuro
+  background-color: $error-bg;
+  color: $error-red;
   padding: 20px;
   border-radius: 8px;
   text-align: center;
   margin-bottom: 30px;
-  border: 1px solid #ef9a9a;
+  border: 1px solid $error-border;
 
   .retry-btn {
-    background-color: #c62828;
+    background-color: $error-red;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -114,32 +125,30 @@ h1 {
     margin-top: 15px;
     transition: background-color 0.3s ease;
     &:hover {
-      background-color: #b71c1c;
+      background-color: $darker-error-red;
     }
   }
 }
 
-// Estilos para mensagem de nenhum produto
 .no-products-message {
   text-align: center;
   padding: 50px;
   font-size: 1.2em;
-  color: #777;
+  color: $medium-gray-text;
   p {
     margin-bottom: 25px;
     font-style: italic;
   }
   .add-product-btn-empty-state {
-    @extend .add-product-btn; // Reusa estilos do botão principal
-    margin-top: 0; // Remove margin-top extra
-    background-color: #27ae60; // Verde
+    @extend .add-product-btn;
+    margin-top: 0;
+    background-color: $success-green;
     &:hover {
-      background-color: #229954;
+      background-color: $darker-success-green;
     }
   }
 }
 
-/* Responsividade para telas menores */
 @media (max-width: 768px) {
   .product-list-container {
     margin: 20px 10px;
@@ -165,17 +174,16 @@ h1 {
     grid-template-columns: 1fr;
     gap: 20px;
   }
-
 }
 
 .image-preview-container {
   text-align: center;
   .image-preview {
-    max-width: 100%; // Usar 100% para ser responsivo
-    height: auto; // Manter proporções
-    display: block; // Remover espaços extras se for inline
-    border: 1px solid #ddd;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid $border-light;
     border-radius: 4px;
-    object-fit: contain; // Ou 'cover', dependendo do efeito desejado
+    object-fit: contain;
   }
 }

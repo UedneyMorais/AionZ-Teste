@@ -5,7 +5,7 @@ import { routes } from './app.routes';
 import { provideClientHydration } from '@angular/platform-browser';
 import { HTTP_INTERCEPTORS, provideHttpClient, withFetch, withInterceptorsFromDi } from '@angular/common/http';
 import { ErrorInterceptor } from './core/interceptors/error.interceptor';
-import { GlobalErrorHandler } from './core/services/error/global-error-handler.service'; // <-- Importe seu GlobalErrorHandler
+import { GlobalErrorHandler } from './core/services/error/global-error-handler.service';
 
 
 export const appConfig: ApplicationConfig = {
