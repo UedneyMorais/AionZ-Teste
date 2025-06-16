@@ -107,22 +107,7 @@ API Backend	http://localhost:3000</br>
 Frontend	http://localhost:4000</br>
 Health Check	http://localhost:3000/health</br>
 
-7. Desenvolvimento (Para Contribuidores)</br>
-7.1. Backend (API Products)</br>
-```bash
-cd api-products
-npm install
-npm run start:dev
-```
-
-7.2. Frontend (Front Products)
-```bash
-cd front-products
-npm install
-npm run start
-```
-
-8. Considerações Importantes</br>
+7. Considerações Importantes</br>
 Healthchecks configurados para evitar race conditions</br>
 Volume postgres_data persiste dados do PostgreSQL</br>
 Rede Docker app_network permite comunicação entre serviços</br>
