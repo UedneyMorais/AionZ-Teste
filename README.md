@@ -63,7 +63,7 @@ Este projeto é composto por:
 │       └── init.sql             # Script SQL de inicialização
 └── docker-compose.yml           # Arquivo de orquestração
 ```
-4. Configuração do Ambiente</br>
+##4. Configuração do Ambiente</br>
 4.1. Variáveis de Ambiente</br>
 Backend (api-products/.env)</br>
 
@@ -75,7 +75,7 @@ DB_USER=docker_user
 DB_PASSWORD=docker_password
 DB_NAME=product_db
 ```
-5. Como Rodar a Aplicação</br>
+##5. Como Rodar a Aplicação</br>
 5.1. Iniciando com Docker Compose</br>
 ```bash
 docker compose up --build -d --force-recreate
@@ -87,11 +87,11 @@ Parâmetro	Descrição</br>
 -d	Executa em modo detached (segundo plano)</br>
 --force-recreate	Recria os containers mesmo sem mudanças</br>
 
-5.2. Parando a Aplicação</br>
+##5.2. Parando a Aplicação</br>
 ```bash
 docker compose down -v
 ```
-5.3. Reconstruindo Imagens
+##5.3. Reconstruindo Imagens
 ```bash
 docker compose build
 docker compose up -d --force-recreate
@@ -101,13 +101,13 @@ Ou rode
 docker compose down -v && docker compose up -d --force-recreate
 ```
 
-6. Acessando a Aplicação</br>
+##6. Acessando a Aplicação</br>
 Serviço	URL</br>
 API Backend	http://localhost:3000</br>
 Frontend	http://localhost:4000</br>
 Health Check	http://localhost:3000/health</br>
 
-7. Considerações Importantes</br>
+##7. Considerações Importantes</br>
 Healthchecks configurados para evitar race conditions</br>
 Volume postgres_data persiste dados do PostgreSQL</br>
 Rede Docker app_network permite comunicação entre serviços</br>
