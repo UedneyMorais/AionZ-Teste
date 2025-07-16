@@ -1,5 +1,3 @@
-
-<img width="1917" height="1080" alt="Screenshot from 2025-07-16 09-54-57" src="https://github.com/user-attachments/assets/607a879c-c552-47f2-8cad-df7cd7804d3a" />
 # Documentação do Projeto: Produtos (Backend e Frontend)
 
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
@@ -7,6 +5,7 @@
 ![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+<img width="1917" height="1080" alt="Screenshot from 2025-07-16 09-54-57" src="https://github.com/user-attachments/assets/607a879c-c552-47f2-8cad-df7cd7804d3a" />
 
 Este repositório contém os códigos-fonte do projeto de Produtos, que inclui um backend (API RESTful em NestJS) e um frontend (aplicação web em Angular Universal/SSR). Ambos os serviços são orquestrados usando Docker Compose para facilitar o desenvolvimento e a implantação.
 
