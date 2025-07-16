@@ -1,3 +1,5 @@
+
+<img width="1917" height="1080" alt="Screenshot from 2025-07-16 09-54-57" src="https://github.com/user-attachments/assets/607a879c-c552-47f2-8cad-df7cd7804d3a" />
 # Documentação do Projeto: Produtos (Backend e Frontend)
 
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
