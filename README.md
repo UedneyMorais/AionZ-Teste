@@ -113,7 +113,7 @@ Healthchecks configurados para evitar race conditions</br>
 Volume postgres_data persiste dados do PostgreSQL</br>
 Rede Docker app_network permite comunicação entre serviços</br>
 Existem algumas imagens dentro de IonZ-Teste/front-products/assets para teste.</br>
-Existe o arquivo products.txt com alguns produtos e insomnia em /home/dev/Documents/teste/IonZ-Teste/api-products/docs </br>
+Existe o arquivo products.txt com alguns produtos e insomnia em /IonZ-Teste/api-products/docs </br>
 
 #Fullstack CRUD com NestJS + Angular SSR + Docker<br>
 **Desenvolvido como teste técnico para Aionz - Passei, mas a vaga "evaporou".**  
