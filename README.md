@@ -17,7 +17,8 @@ Este repositório contém os códigos-fonte do projeto de Produtos, que inclui u
 - [Configuração do Ambiente](#4-configuração-do-ambiente)
 - [Como Rodar a Aplicação](#5-como-rodar-a-aplicação)
 - [Acessando a Aplicação](#6-acessando-a-aplicação)
-- [Considerações Importantes](#8-considerações-importantes)
+- [Considerações Importantes](#7-considerações-importantes)
+- [Licença](#8-licença)
 
 ## 1. Visão Geral
 
@@ -115,7 +116,7 @@ Rede Docker app_network permite comunicação entre serviços</br>
 Existem algumas imagens dentro de IonZ-Teste/front-products/assets para teste.</br>
 Existe o arquivo products.txt com alguns produtos e insomnia em /IonZ-Teste/api-products/docs </br>
 
-#Fullstack CRUD com NestJS + Angular SSR + Docker<br>
+## 8. Licença
 **Desenvolvido como teste técnico para Aionz - Passei, mas a vaga "evaporou".**  
 Aqui está tudo o que eles pediram (e mais um pouco), agora aberto à comunidade.
 
