@@ -114,3 +114,9 @@ Volume postgres_data persiste dados do PostgreSQL</br>
 Rede Docker app_network permite comunicação entre serviços</br>
 Existem algumas imagens dentro de IonZ-Teste/front-products/assets para teste.</br>
 Existe o arquivo products.txt com alguns produtos e insomnia em /home/dev/Documents/teste/IonZ-Teste/api-products/docs </br>
+
+# 🔥 Fullstack CRUD com NestJS + Angular SSR + Docker
+**Desenvolvido como teste técnico para [Nome da Empresa] - Passei, mas a vaga "evaporou".**  
+Aqui está tudo o que eles pediram (e mais um pouco), agora aberto à comunidade.
+
+⚠️ **Aviso Legal:** Código sob licença MIT. Proibido uso comercial por Aionz sem autorização por escrito.
